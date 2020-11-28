@@ -1,4 +1,4 @@
-package test;
+package test.test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import main.Interval;
 import main.IntervalBuilder;
+import test.Point;
 
 public class IntervalTest {
   
