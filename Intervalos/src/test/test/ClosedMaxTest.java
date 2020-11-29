@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import main.ClosedMax;
 import main.OpenLowerSemiInterval;
 
-public class ClosedMaxTest extends MaxTest {
+public class ClosedMaxTest extends OpenLowerSemiIntervalTest {
 
   @Override
   protected OpenLowerSemiInterval createMax() {

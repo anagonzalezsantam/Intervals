@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import main.OpenLowerSemiInterval;
 import test.Point;
 
-public class MaxTest {
+public class OpenLowerSemiIntervalTest {
   
   protected OpenLowerSemiInterval max;
   protected Point point;
@@ -26,17 +26,17 @@ public class MaxTest {
 
   @Test
   public void givenMaxWhenIsWithinWithLessValueThenTrue(){
-    assertTrue(this.max.isWithin(this.point.getLess()));
+    assertTrue(this.max.include(this.point.getLess()));
   }
 
   @Test
   public void givenMaxWhenIsWithinWithEqualsValue(){
-    assertFalse(this.max.isWithin(this.point.getEquals()));
+    assertFalse(this.max.include(this.point.getEquals()));
   }
 
   @Test
   public void givenMaxWhenIsWithinWithGreaterValueThenTrue(){
-    assertFalse(this.max.isWithin(this.point.getGreater()));
+    assertFalse(this.max.include(this.point.getGreater()));
   }
  
 }
