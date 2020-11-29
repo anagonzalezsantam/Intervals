@@ -2,8 +2,6 @@ package main;
 
 public class OpenUpperSemiInterval extends SemiInterval {
 
-	protected double limit;
-
 	public OpenUpperSemiInterval(double limit) {
 		super(limit);
 	}

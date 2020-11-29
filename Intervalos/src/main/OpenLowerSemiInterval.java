@@ -2,8 +2,6 @@ package main;
 
 public class OpenLowerSemiInterval extends SemiInterval {
 
-	protected double limit;
-
 	public OpenLowerSemiInterval(double limit) {
 		super(limit);
 	}
