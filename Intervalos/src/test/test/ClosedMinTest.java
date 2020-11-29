@@ -7,7 +7,7 @@ import main.OpenUpperSemiInterval;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ClosedMinTest extends MinTest {
+public class ClosedMinTest extends OpenUpperSemiIntervalTest {
 
   @Override
   protected OpenUpperSemiInterval createMin() {
@@ -17,7 +17,7 @@ public class ClosedMinTest extends MinTest {
   @Test
   @Override
   public void givenMinWhenIsWithinWithEqualsValue(){
-    assertTrue(this.min.isWithin(this.point.getEquals()));
+    assertTrue(this.min.include(this.point.getEquals()));
   }
   
 }

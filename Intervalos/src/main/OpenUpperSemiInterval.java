@@ -11,6 +11,10 @@ public class OpenUpperSemiInterval {
 	public boolean isWithin(double value) {
 		return this.value < value;
 	}
+	
+	public boolean include(double value) {
+		return false;
+	}
 
 	@Override
 	public int hashCode() {

@@ -9,7 +9,7 @@ import test.Point;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MinTest {
+public class OpenUpperSemiIntervalTest {
   
   protected OpenUpperSemiInterval min;
   protected Point point;
@@ -26,17 +26,17 @@ public class MinTest {
 
   @Test
   public void givenMinWhenIsWithinWithLessValueThenTrue(){
-    assertFalse(this.min.isWithin(this.point.getLess()));
+    assertFalse(this.min.include(this.point.getLess()));
   }
 
   @Test
   public void givenMinWhenIsWithinWithEqualsValue(){
-    assertFalse(this.min.isWithin(this.point.getEquals()));
+    assertFalse(this.min.include(this.point.getEquals()));
   }
 
   @Test
   public void givenMinWhenIsWithinWithGreaterValueThenTrue(){
-    assertTrue(this.min.isWithin(this.point.getGreater()));
+    assertTrue(this.min.include(this.point.getGreater()));
   }
  
 }
