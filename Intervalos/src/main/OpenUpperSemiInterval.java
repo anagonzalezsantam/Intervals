@@ -1,11 +1,11 @@
 package main;
 
-public class OpenUpperSemiInterval {
+public class OpenUpperSemiInterval extends SemiInterval {
 
 	protected double limit;
 
 	public OpenUpperSemiInterval(double limit) {
-		this.limit = limit;
+		super(limit);
 	}
 	
 	public boolean include(double value) {
