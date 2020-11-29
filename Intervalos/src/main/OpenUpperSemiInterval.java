@@ -12,7 +12,7 @@ public class OpenUpperSemiInterval extends SemiInterval {
   
   @Override
 	public String toString() {
-		return "(" + super.toString();
+		return "(" + this.limit;
 	}	
   
 }
