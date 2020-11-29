@@ -11,32 +11,32 @@ import test.Point;
 
 public class OpenLowerSemiIntervalTest {
   
-  protected OpenLowerSemiInterval max;
+  protected OpenLowerSemiInterval lowerSemiInterval;
   protected Point point;
 
   @BeforeEach
   public void before(){
     this.point = new Point(4.4);
-    this.max = this.createMax();
+    this.lowerSemiInterval = this.createLowerSemiInterval();
   }
 
-  protected OpenLowerSemiInterval createMax() {
+  protected OpenLowerSemiInterval createLowerSemiInterval() {
     return new OpenLowerSemiInterval(this.point.getEquals());
   }
 
   @Test
   public void givenMaxWhenIsWithinWithLessValueThenTrue(){
-    assertTrue(this.max.include(this.point.getLess()));
+    assertTrue(this.lowerSemiInterval.include(this.point.getLess()));
   }
 
   @Test
   public void givenMaxWhenIsWithinWithEqualsValue(){
-    assertFalse(this.max.include(this.point.getEquals()));
+    assertFalse(this.lowerSemiInterval.include(this.point.getEquals()));
   }
 
   @Test
   public void givenMaxWhenIsWithinWithGreaterValueThenTrue(){
-    assertFalse(this.max.include(this.point.getGreater()));
+    assertFalse(this.lowerSemiInterval.include(this.point.getGreater()));
   }
  
 }

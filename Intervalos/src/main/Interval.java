@@ -3,23 +3,23 @@ package main;
 public class Interval {
 
 	private Min min;
-	private OpenLowerSemiInterval max;
+	private OpenLowerSemiInterval lowerSemiInterval;
 
-	public Interval(Min min, OpenLowerSemiInterval max) {
-		assert min.value <= max.limit;
+	public Interval(Min min, OpenLowerSemiInterval lowerSemiInterval) {
+		assert min.value <= lowerSemiInterval.limit;
 		this.min = min;
-		this.max = max;
+		this.lowerSemiInterval = lowerSemiInterval;
 	}
 
 	public boolean include(double value) {
-			return this.min.isWithin(value) && this.max.include(value);
+			return this.min.isWithin(value) && this.lowerSemiInterval.include(value);
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((max == null) ? 0 : max.hashCode());
+		result = prime * result + ((lowerSemiInterval == null) ? 0 : lowerSemiInterval.hashCode());
 		result = prime * result + ((min == null) ? 0 : min.hashCode());
 		return result;
 	}
@@ -33,10 +33,10 @@ public class Interval {
 		if (getClass() != obj.getClass())
 			return false;
 		Interval other = (Interval) obj;
-		if (max == null) {
-			if (other.max != null)
+		if (lowerSemiInterval == null) {
+			if (other.lowerSemiInterval != null)
 				return false;
-		} else if (!max.equals(other.max))
+		} else if (!lowerSemiInterval.equals(other.lowerSemiInterval))
 			return false;
 		if (min == null) {
 			if (other.min != null)
@@ -48,7 +48,7 @@ public class Interval {
 
 	@Override
 	public String toString() {
-		return this.min.toString() + ", " + max.toString();
+		return this.min.toString() + ", " + lowerSemiInterval.toString();
 	}	
 
 }
