@@ -2,21 +2,21 @@ package main;
 
 public class IntervalBuilder {
 
-	private OpenUpperSemiInterval min;
+	private OpenUpperSemiInterval upperSemiInterval;
 	private OpenLowerSemiInterval lowerSemiInterval;
-	private boolean minConfigured;
+	private boolean upperConfigured;
 	private boolean lowerConfigured;
 
 	public IntervalBuilder(){
-		this.minConfigured = false;
+		this.upperConfigured = false;
 		this.lowerConfigured = false;
 	}
 
 	public IntervalBuilder open(double value) {
-		assert !this.minConfigured || !this.lowerConfigured;
-		if (!this.minConfigured){
-			this.min = new OpenUpperSemiInterval(value);
-			this.minConfigured = true;
+		assert !this.upperConfigured || !this.lowerConfigured;
+		if (!this.upperConfigured){
+			this.upperSemiInterval = new OpenUpperSemiInterval(value);
+			this.upperConfigured = true;
 		} else if (!this.lowerConfigured){
 			this.lowerSemiInterval = new OpenLowerSemiInterval(value);
 			this.lowerConfigured = true;
@@ -25,10 +25,10 @@ public class IntervalBuilder {
 	}
   
 	public IntervalBuilder closed(double value) {
-		assert !this.minConfigured || !this.lowerConfigured;
-		if (!this.minConfigured){
-			this.min = new CloseUpperSemiInterval(value);
-			this.minConfigured = true;
+		assert !this.upperConfigured || !this.lowerConfigured;
+		if (!this.upperConfigured){
+			this.upperSemiInterval = new CloseUpperSemiInterval(value);
+			this.upperConfigured = true;
 		} else if (!this.lowerConfigured){
 			this.lowerSemiInterval = new CloseLowerSemiInterval(value);
 			this.lowerConfigured = true;
@@ -37,8 +37,8 @@ public class IntervalBuilder {
 	}
 
 	public Interval build() {
-		assert this.minConfigured && this.lowerConfigured;
-		return new Interval(this.min, this.lowerSemiInterval);
+		assert this.upperConfigured && this.lowerConfigured;
+		return new Interval(this.upperSemiInterval, this.lowerSemiInterval);
 	} 
 
 }

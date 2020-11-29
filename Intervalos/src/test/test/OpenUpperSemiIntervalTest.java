@@ -11,32 +11,32 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class OpenUpperSemiIntervalTest {
   
-  protected OpenUpperSemiInterval min;
+  protected OpenUpperSemiInterval upperSemiInterval;
   protected Point point;
 
   @BeforeEach
   public void before(){
     this.point = new Point(4.4);
-    this.min = this.createMin();
+    this.upperSemiInterval = this.createUpperSemiInterval();
   }
 
-  protected OpenUpperSemiInterval createMin() {
+  protected OpenUpperSemiInterval createUpperSemiInterval() {
     return new OpenUpperSemiInterval(this.point.getEquals());
   }
 
   @Test
   public void givenMinWhenIsWithinWithLessValueThenTrue(){
-    assertFalse(this.min.include(this.point.getLess()));
+    assertFalse(this.upperSemiInterval.include(this.point.getLess()));
   }
 
   @Test
   public void givenMinWhenIsWithinWithEqualsValue(){
-    assertFalse(this.min.include(this.point.getEquals()));
+    assertFalse(this.upperSemiInterval.include(this.point.getEquals()));
   }
 
   @Test
   public void givenMinWhenIsWithinWithGreaterValueThenTrue(){
-    assertTrue(this.min.include(this.point.getGreater()));
+    assertTrue(this.upperSemiInterval.include(this.point.getGreater()));
   }
  
 }

@@ -2,8 +2,8 @@ package main;
 
 public class CloseLowerSemiInterval extends OpenLowerSemiInterval {
 
-	public CloseLowerSemiInterval(double value) {
-		super(value);
+	public CloseLowerSemiInterval(double limit) {
+		super(limit);
 	}
 
 	@Override

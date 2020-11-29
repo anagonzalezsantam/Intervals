@@ -2,18 +2,18 @@ package main;
 
 public class CloseUpperSemiInterval extends OpenUpperSemiInterval {
 
-	public CloseUpperSemiInterval(double value) {
-		super(value);
+	public CloseUpperSemiInterval(double limit) {
+		super(limit);
 	}
 
 	@Override
 	public boolean include(double value) {
-		return super.include(value) || this.value == value;
+		return super.include(value) || this.limit == value;
 	}
 
 	@Override
 	public String toString() {
-		return "[" + this.value;
+		return "[" + this.limit;
 	}	
   
 }

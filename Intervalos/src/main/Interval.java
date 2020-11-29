@@ -2,17 +2,17 @@ package main;
 
 public class Interval {
 
-	private OpenUpperSemiInterval min;
+	private OpenUpperSemiInterval upperSemiInterval;
 	private OpenLowerSemiInterval lowerSemiInterval;
 
-	public Interval(OpenUpperSemiInterval min, OpenLowerSemiInterval lowerSemiInterval) {
-		assert min.value <= lowerSemiInterval.limit;
-		this.min = min;
+	public Interval(OpenUpperSemiInterval upperSemiInterval, OpenLowerSemiInterval lowerSemiInterval) {
+		assert upperSemiInterval.limit <= lowerSemiInterval.limit;
+		this.upperSemiInterval = upperSemiInterval;
 		this.lowerSemiInterval = lowerSemiInterval;
 	}
 
 	public boolean include(double value) {
-			return this.min.include(value) && this.lowerSemiInterval.include(value);
+			return this.upperSemiInterval.include(value) && this.lowerSemiInterval.include(value);
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class Interval {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((lowerSemiInterval == null) ? 0 : lowerSemiInterval.hashCode());
-		result = prime * result + ((min == null) ? 0 : min.hashCode());
+		result = prime * result + ((upperSemiInterval == null) ? 0 : upperSemiInterval.hashCode());
 		return result;
 	}
 
@@ -38,17 +38,17 @@ public class Interval {
 				return false;
 		} else if (!lowerSemiInterval.equals(other.lowerSemiInterval))
 			return false;
-		if (min == null) {
-			if (other.min != null)
+		if (upperSemiInterval == null) {
+			if (other.upperSemiInterval != null)
 				return false;
-		} else if (!min.equals(other.min))
+		} else if (!upperSemiInterval.equals(other.upperSemiInterval))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return this.min.toString() + ", " + lowerSemiInterval.toString();
+		return this.upperSemiInterval.toString() + ", " + lowerSemiInterval.toString();
 	}	
 
 }
