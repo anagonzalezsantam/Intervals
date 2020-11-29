@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import main.CloseLowerSemiInterval;
-import main.ClosedMin;
+import main.CloseUpperSemiInterval;
 import main.Interval;
 import main.IntervalBuilder;
 import main.OpenLowerSemiInterval;
@@ -38,13 +38,13 @@ public class BuilderIntervalTest {
   @Test
   public void givenIntervalBuilderWhenClosedOpen(){
     Interval interval = new IntervalBuilder().closed(this.min).open(this.max).build();
-    assertEquals(interval, new Interval(new ClosedMin(this.min), new OpenLowerSemiInterval(this.max)));
+    assertEquals(interval, new Interval(new CloseUpperSemiInterval(this.min), new OpenLowerSemiInterval(this.max)));
   }
 
   @Test
   public void givenIntervalBuilderWhenClosedClosed(){
     Interval interval = new IntervalBuilder().closed(this.min).closed(this.max).build();
-    assertEquals(interval, new Interval(new ClosedMin(this.min), new CloseLowerSemiInterval(this.max)));
+    assertEquals(interval, new Interval(new CloseUpperSemiInterval(this.min), new CloseLowerSemiInterval(this.max)));
   }
 
 }

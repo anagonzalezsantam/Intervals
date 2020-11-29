@@ -2,16 +2,16 @@ package test.test;
 
 import org.junit.jupiter.api.Test;
 
-import main.ClosedMin;
+import main.CloseUpperSemiInterval;
 import main.OpenUpperSemiInterval;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ClosedMinTest extends OpenUpperSemiIntervalTest {
+public class CloseUpperSemiIntervalTest extends OpenUpperSemiIntervalTest {
 
   @Override
   protected OpenUpperSemiInterval createMin() {
-    return new ClosedMin(this.point.getEquals());
+    return new CloseUpperSemiInterval(this.point.getEquals());
   }
 
   @Test

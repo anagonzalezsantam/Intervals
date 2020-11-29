@@ -1,8 +1,8 @@
 package main;
 
-public class ClosedMin extends OpenUpperSemiInterval {
+public class CloseUpperSemiInterval extends OpenUpperSemiInterval {
 
-	public ClosedMin(double value) {
+	public CloseUpperSemiInterval(double value) {
 		super(value);
 	}
 

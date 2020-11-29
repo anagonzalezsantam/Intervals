@@ -27,7 +27,7 @@ public class IntervalBuilder {
 	public IntervalBuilder closed(double value) {
 		assert !this.minConfigured || !this.lowerConfigured;
 		if (!this.minConfigured){
-			this.min = new ClosedMin(value);
+			this.min = new CloseUpperSemiInterval(value);
 			this.minConfigured = true;
 		} else if (!this.lowerConfigured){
 			this.lowerSemiInterval = new CloseLowerSemiInterval(value);
