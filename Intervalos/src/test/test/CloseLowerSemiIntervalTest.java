@@ -10,14 +10,14 @@ import main.OpenLowerSemiInterval;
 public class CloseLowerSemiIntervalTest extends OpenLowerSemiIntervalTest {
 
   @Override
-  protected OpenLowerSemiInterval createMax() {
+  protected OpenLowerSemiInterval createLowerSemiInterval() {
     return new CloseLowerSemiInterval(this.point.getEquals());
   }
 
   @Test
   @Override
   public void givenMaxWhenIsWithinWithEqualsValue(){
-    assertTrue(this.max.include(this.point.getEquals()));
+    assertTrue(this.lowerSemiInterval.include(this.point.getEquals()));
   }
   
 }
