@@ -1,8 +1,8 @@
 package main;
 
-public class ClosedMax extends OpenLowerSemiInterval {
+public class CloseLowerSemiInterval extends OpenLowerSemiInterval {
 
-	public ClosedMax(double value) {
+	public CloseLowerSemiInterval(double value) {
 		super(value);
 	}
 

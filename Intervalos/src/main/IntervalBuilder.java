@@ -30,7 +30,7 @@ public class IntervalBuilder {
 			this.min = new ClosedMin(value);
 			this.minConfigured = true;
 		} else if (!this.maxConfigured){
-			this.max = new ClosedMax(value);
+			this.max = new CloseLowerSemiInterval(value);
 			this.maxConfigured = true;
 		}
 		return this;
