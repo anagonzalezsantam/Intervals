@@ -8,10 +8,6 @@ public class OpenLowerSemiInterval {
 		this.value = value;
 	}
 
-	public boolean isWithin(double value) {
-		return this.value > value;
-	}
-
 	public boolean include(double value) {
 		return this.value > value;
 	}

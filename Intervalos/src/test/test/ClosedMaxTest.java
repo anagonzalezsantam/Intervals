@@ -17,7 +17,7 @@ public class ClosedMaxTest extends OpenLowerSemiIntervalTest {
   @Test
   @Override
   public void givenMaxWhenIsWithinWithEqualsValue(){
-    assertTrue(this.max.isWithin(this.point.getEquals()));
+    assertTrue(this.max.include(this.point.getEquals()));
   }
   
 }
