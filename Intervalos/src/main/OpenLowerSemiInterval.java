@@ -13,7 +13,7 @@ public class OpenLowerSemiInterval {
 	}
 
 	public boolean include(double value) {
-		return false;
+		return this.value > value;
 	}
 
 	@Override
