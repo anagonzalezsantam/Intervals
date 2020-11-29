@@ -10,7 +10,7 @@ import main.ClosedMin;
 import main.Interval;
 import main.IntervalBuilder;
 import main.OpenLowerSemiInterval;
-import main.Min;
+import main.OpenUpperSemiInterval;
 
 public class BuilderIntervalTest {
 
@@ -26,13 +26,13 @@ public class BuilderIntervalTest {
   @Test
   public void givenIntervalBuilderWhenOpenOpen(){
     Interval interval = new IntervalBuilder().open(this.min).open(this.max).build();
-    assertEquals(interval, new Interval(new Min(this.min), new OpenLowerSemiInterval(this.max)));
+    assertEquals(interval, new Interval(new OpenUpperSemiInterval(this.min), new OpenLowerSemiInterval(this.max)));
   }
 
   @Test
   public void givenIntervalBuilderWhenOpenClosed(){
     Interval interval = new IntervalBuilder().open(this.min).closed(this.max).build();
-    assertEquals(interval, new Interval(new Min(this.min), new CloseLowerSemiInterval(this.max)));
+    assertEquals(interval, new Interval(new OpenUpperSemiInterval(this.min), new CloseLowerSemiInterval(this.max)));
   }
 
   @Test

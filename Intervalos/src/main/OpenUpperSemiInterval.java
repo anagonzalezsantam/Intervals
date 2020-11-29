@@ -1,10 +1,10 @@
 package main;
 
-public class Min {
+public class OpenUpperSemiInterval {
 
 	protected double value;
 
-	public Min(double value) {
+	public OpenUpperSemiInterval(double value) {
 		this.value = value;
 	}
 
@@ -30,7 +30,7 @@ public class Min {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Min other = (Min) obj;
+		OpenUpperSemiInterval other = (OpenUpperSemiInterval) obj;
 		if (Double.doubleToLongBits(value) != Double.doubleToLongBits(other.value))
 			return false;
 		return true;

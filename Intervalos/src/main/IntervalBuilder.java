@@ -2,7 +2,7 @@ package main;
 
 public class IntervalBuilder {
 
-	private Min min;
+	private OpenUpperSemiInterval min;
 	private OpenLowerSemiInterval lowerSemiInterval;
 	private boolean minConfigured;
 	private boolean lowerConfigured;
@@ -15,7 +15,7 @@ public class IntervalBuilder {
 	public IntervalBuilder open(double value) {
 		assert !this.minConfigured || !this.lowerConfigured;
 		if (!this.minConfigured){
-			this.min = new Min(value);
+			this.min = new OpenUpperSemiInterval(value);
 			this.minConfigured = true;
 		} else if (!this.lowerConfigured){
 			this.lowerSemiInterval = new OpenLowerSemiInterval(value);

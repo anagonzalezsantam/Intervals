@@ -3,14 +3,14 @@ package test.test;
 import org.junit.jupiter.api.Test;
 
 import main.ClosedMin;
-import main.Min;
+import main.OpenUpperSemiInterval;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ClosedMinTest extends MinTest {
 
   @Override
-  protected Min createMin() {
+  protected OpenUpperSemiInterval createMin() {
     return new ClosedMin(this.point.getEquals());
   }
 

@@ -2,10 +2,10 @@ package main;
 
 public class Interval {
 
-	private Min min;
+	private OpenUpperSemiInterval min;
 	private OpenLowerSemiInterval lowerSemiInterval;
 
-	public Interval(Min min, OpenLowerSemiInterval lowerSemiInterval) {
+	public Interval(OpenUpperSemiInterval min, OpenLowerSemiInterval lowerSemiInterval) {
 		assert min.value <= lowerSemiInterval.limit;
 		this.min = min;
 		this.lowerSemiInterval = lowerSemiInterval;

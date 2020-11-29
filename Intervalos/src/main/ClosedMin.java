@@ -1,6 +1,6 @@
 package main;
 
-public class ClosedMin extends Min {
+public class ClosedMin extends OpenUpperSemiInterval {
 
 	public ClosedMin(double value) {
 		super(value);

@@ -3,7 +3,7 @@ package test.test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import main.Min;
+import main.OpenUpperSemiInterval;
 import test.Point;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MinTest {
   
-  protected Min min;
+  protected OpenUpperSemiInterval min;
   protected Point point;
 
   @BeforeEach
@@ -20,8 +20,8 @@ public class MinTest {
     this.min = this.createMin();
   }
 
-  protected Min createMin() {
-    return new Min(this.point.getEquals());
+  protected OpenUpperSemiInterval createMin() {
+    return new OpenUpperSemiInterval(this.point.getEquals());
   }
 
   @Test
