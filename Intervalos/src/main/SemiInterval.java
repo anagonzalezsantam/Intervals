@@ -1,12 +1,14 @@
 package main;
 
-public class SemiInterval {
+public abstract class SemiInterval {
 
 	protected double limit;
 
 	public SemiInterval(double limit) {
 		this.limit = limit;
 	}
+	
+	public abstract boolean include(double value);
 	
 	@Override
 	public int hashCode() {
