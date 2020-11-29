@@ -2,14 +2,14 @@ package main;
 
 public class OpenLowerSemiInterval {
 
-	protected double value;
+	protected double limit;
 
-	public OpenLowerSemiInterval(double value) {
-		this.value = value;
+	public OpenLowerSemiInterval(double limit) {
+		this.limit = limit;
 	}
 
 	public boolean include(double value) {
-		return this.value > value;
+		return this.limit > value;
 	}
 
 	@Override
@@ -17,7 +17,7 @@ public class OpenLowerSemiInterval {
 		final int prime = 31;
 		int result = 1;
 		long temp;
-		temp = Double.doubleToLongBits(value);
+		temp = Double.doubleToLongBits(limit);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
@@ -31,14 +31,14 @@ public class OpenLowerSemiInterval {
 	    if (getClass() != obj.getClass())
 	      return false;
 	    OpenLowerSemiInterval other = (OpenLowerSemiInterval) obj;
-	    if (Double.doubleToLongBits(value) != Double.doubleToLongBits(other.value))
+	    if (Double.doubleToLongBits(limit) != Double.doubleToLongBits(other.limit))
 	      return false;
 	    return true;
 	}
 
 	@Override
 	public String toString() {
-		return this.value + ")";
+		return this.limit + ")";
 	}
 
 }

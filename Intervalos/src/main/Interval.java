@@ -6,7 +6,7 @@ public class Interval {
 	private OpenLowerSemiInterval max;
 
 	public Interval(Min min, OpenLowerSemiInterval max) {
-		assert min.value <= max.value;
+		assert min.value <= max.limit;
 		this.min = min;
 		this.max = max;
 	}

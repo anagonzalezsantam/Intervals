@@ -8,12 +8,12 @@ public class CloseLowerSemiInterval extends OpenLowerSemiInterval {
 
 	@Override
 	public boolean include(double value) {
-		return super.include(value) || this.value == value;
+		return super.include(value) || this.limit == value;
 	}
 
 	@Override
 	public String toString() {
-		return this.value + "]";
+		return this.limit + "]";
 	}	
 
 }
