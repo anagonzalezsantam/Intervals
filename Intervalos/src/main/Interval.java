@@ -12,7 +12,7 @@ public class Interval {
 	}
 
 	public boolean include(double value) {
-			return this.min.isWithin(value) && this.lowerSemiInterval.include(value);
+			return this.min.include(value) && this.lowerSemiInterval.include(value);
 	}
 
 	@Override

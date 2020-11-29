@@ -7,8 +7,8 @@ public class ClosedMin extends OpenUpperSemiInterval {
 	}
 
 	@Override
-	public boolean isWithin(double value) {
-		return super.isWithin(value) || this.value == value;
+	public boolean include(double value) {
+		return super.include(value) || this.value == value;
 	}
 
 	@Override
