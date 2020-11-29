@@ -3,7 +3,7 @@ package main;
 public class IntervalBuilder {
 
 	private Min min;
-	private Max max;
+	private OpenLowerSemiInterval max;
 	private boolean minConfigured;
 	private boolean maxConfigured;
 
@@ -18,7 +18,7 @@ public class IntervalBuilder {
 			this.min = new Min(value);
 			this.minConfigured = true;
 		} else if (!this.maxConfigured){
-			this.max = new Max(value);
+			this.max = new OpenLowerSemiInterval(value);
 			this.maxConfigured = true;
 		}
 		return this;

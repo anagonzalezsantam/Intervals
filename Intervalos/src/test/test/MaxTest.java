@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import main.Max;
+import main.OpenLowerSemiInterval;
 import test.Point;
 
 public class MaxTest {
   
-  protected Max max;
+  protected OpenLowerSemiInterval max;
   protected Point point;
 
   @BeforeEach
@@ -20,8 +20,8 @@ public class MaxTest {
     this.max = this.createMax();
   }
 
-  protected Max createMax() {
-    return new Max(this.point.getEquals());
+  protected OpenLowerSemiInterval createMax() {
+    return new OpenLowerSemiInterval(this.point.getEquals());
   }
 
   @Test

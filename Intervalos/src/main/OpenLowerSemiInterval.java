@@ -1,10 +1,10 @@
 package main;
 
-public class Max {
+public class OpenLowerSemiInterval {
 
 	protected double value;
 
-	public Max(double value) {
+	public OpenLowerSemiInterval(double value) {
 		this.value = value;
 	}
 
@@ -30,7 +30,7 @@ public class Max {
 	      return false;
 	    if (getClass() != obj.getClass())
 	      return false;
-	    Max other = (Max) obj;
+	    OpenLowerSemiInterval other = (OpenLowerSemiInterval) obj;
 	    if (Double.doubleToLongBits(value) != Double.doubleToLongBits(other.value))
 	      return false;
 	    return true;

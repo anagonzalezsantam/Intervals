@@ -3,9 +3,9 @@ package main;
 public class Interval {
 
 	private Min min;
-	private Max max;
+	private OpenLowerSemiInterval max;
 
-	public Interval(Min min, Max max) {
+	public Interval(Min min, OpenLowerSemiInterval max) {
 		assert min.value <= max.value;
 		this.min = min;
 		this.max = max;

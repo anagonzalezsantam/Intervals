@@ -5,12 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import main.ClosedMax;
-import main.Max;
+import main.OpenLowerSemiInterval;
 
 public class ClosedMaxTest extends MaxTest {
 
   @Override
-  protected Max createMax() {
+  protected OpenLowerSemiInterval createMax() {
     return new ClosedMax(this.point.getEquals());
   }
 

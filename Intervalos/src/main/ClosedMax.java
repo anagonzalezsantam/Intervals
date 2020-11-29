@@ -1,6 +1,6 @@
 package main;
 
-public class ClosedMax extends Max {
+public class ClosedMax extends OpenLowerSemiInterval {
 
 	public ClosedMax(double value) {
 		super(value);
