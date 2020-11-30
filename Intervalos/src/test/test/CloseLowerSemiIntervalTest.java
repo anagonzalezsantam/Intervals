@@ -17,7 +17,7 @@ public class CloseLowerSemiIntervalTest extends OpenLowerSemiIntervalTest {
   @Test
   @Override
   public void givenValueEqualsSemiIntervalLimit(){
-    assertTrue(this.lowerSemiInterval.include(this.point.getEquals()));
+    assertTrue(this.semiInterval.include(this.point.getEquals()));
   }
   
 }
