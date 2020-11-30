@@ -23,7 +23,7 @@ public class Interval {
 	}
 	
 	public boolean isIn(Interval interval) {
-		return true;
+		return interval.include(this.getUpperLimit()) || interval.include(this.getLowerLimit());
 	}
 	
 	private double getUpperLimit() {
