@@ -57,4 +57,28 @@ public class IntersectionTest {
 		assertFalse(fixedInterval.isIntersected(proveInterval));
 	}
 	
+	@Test
+	public void givenFixedLowerLimitEqualsProveUpperLimitOpen () {
+		this.proveInterval = this.intervalBuilder.open(0.5).open(1).build();
+		assertFalse(fixedInterval.isIntersected(proveInterval));
+	}
+	
+	@Test
+	public void givenFixedLowerLimitEqualsProveUpperLimitClose () {
+		this.proveInterval = this.intervalBuilder.closed(0.5).closed(1).build();
+		assertTrue(fixedInterval.isIntersected(proveInterval));
+	}
+	
+	@Test
+	public void givenFixedUpperLimitEqualsProveLowerLimitOpen () {
+		this.proveInterval = this.intervalBuilder.open(5).open(7).build();
+		assertFalse(fixedInterval.isIntersected(proveInterval));
+	}
+	
+	@Test
+	public void givenFixedUpperLimitEqualsProveLowerLimitClose () {
+		this.proveInterval = this.intervalBuilder.closed(5).closed(7).build();
+		assertTrue(fixedInterval.isIntersected(proveInterval));
+	}
+	
 }
