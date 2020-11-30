@@ -16,7 +16,7 @@ public class CloseUpperSemiIntervalTest extends OpenUpperSemiIntervalTest {
 
   @Test
   @Override
-  public void givenMinWhenIsWithinWithEqualsValue(){
+  public void givenValueEqualsSemiIntervalLimit(){
     assertTrue(this.upperSemiInterval.include(this.point.getEquals()));
   }
   

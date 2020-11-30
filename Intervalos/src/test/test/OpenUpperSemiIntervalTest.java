@@ -25,17 +25,17 @@ public class OpenUpperSemiIntervalTest {
   }
 
   @Test
-  public void givenMinWhenIsWithinWithLessValueThenTrue(){
+  public void givenValueOutsideSemiIntervalThenFalse(){
     assertFalse(this.upperSemiInterval.include(this.point.getLess()));
   }
 
   @Test
-  public void givenMinWhenIsWithinWithEqualsValue(){
+  public void givenValueEqualsSemiIntervalLimit(){
     assertFalse(this.upperSemiInterval.include(this.point.getEquals()));
   }
 
   @Test
-  public void givenMinWhenIsWithinWithGreaterValueThenTrue(){
+  public void givenValueIntsideSemiIntervalThenTrue(){
     assertTrue(this.upperSemiInterval.include(this.point.getGreater()));
   }
  

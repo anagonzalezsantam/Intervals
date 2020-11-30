@@ -25,17 +25,17 @@ public class OpenLowerSemiIntervalTest {
   }
 
   @Test
-  public void givenMaxWhenIsWithinWithLessValueThenTrue(){
+  public void givenValueIntsideSemiIntervalThenTrue(){
     assertTrue(this.lowerSemiInterval.include(this.point.getLess()));
   }
 
   @Test
-  public void givenMaxWhenIsWithinWithEqualsValue(){
+  public void givenValueEqualsSemiIntervalLimit(){
     assertFalse(this.lowerSemiInterval.include(this.point.getEquals()));
   }
 
   @Test
-  public void givenMaxWhenIsWithinWithGreaterValueThenTrue(){
+  public void givenValueOutsideSemiIntervalThenFalse(){
     assertFalse(this.lowerSemiInterval.include(this.point.getGreater()));
   }
  
