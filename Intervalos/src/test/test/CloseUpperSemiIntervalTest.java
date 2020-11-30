@@ -17,7 +17,7 @@ public class CloseUpperSemiIntervalTest extends OpenUpperSemiIntervalTest {
   @Test
   @Override
   public void givenValueEqualsSemiIntervalLimit(){
-    assertTrue(this.upperSemiInterval.include(this.point.getEquals()));
+    assertTrue(this.semiInterval.include(this.point.getEquals()));
   }
   
 }
