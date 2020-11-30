@@ -1,12 +1,8 @@
 package test.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import main.OpenLowerSemiInterval;
-import main.OpenUpperSemiInterval;
 import main.SemiInterval;
 import test.Point;
 
@@ -23,4 +19,12 @@ public abstract class SemiIntervalTest {
 	
 	public abstract SemiInterval createSemiInterval();
 		
+	@Test
+	public abstract void givenValueOutsideSemiIntervalThenFalse();
+
+	@Test
+	public abstract void givenValueEqualsSemiIntervalLimit();
+
+	@Test
+	public abstract void givenValueIntsideSemiIntervalThenTrue();
 }
