@@ -16,10 +16,7 @@ public class Interval {
 	}
 
 	public boolean isIntersected(Interval interval) {
-		return interval.include(this.getUpperLimit()) || 
-			   interval.include(this.getLowerLimit()) ||
-			   this.include(interval.getUpperLimit()) ||
-			   this.include(interval.getLowerLimit());
+		return interval.isIn(this) || this.isIn(interval);
 	}
 	
 	public boolean isIn(Interval interval) {
