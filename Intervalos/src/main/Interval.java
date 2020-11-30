@@ -22,7 +22,7 @@ public class Interval {
 			   this.include(interval.getLowerLimit());
 	}
 	
-	private boolean isIn(Interval interval) {
+	public boolean isIn(Interval interval) {
 		return true;
 	}
 	

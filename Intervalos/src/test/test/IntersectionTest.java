@@ -84,8 +84,8 @@ public class IntersectionTest {
 	@Test
 	public void testIsInInterval() {
 		this.proveInterval = this.intervalBuilder.closed(2).closed(4).build();
-		assertTrue(proveInterval.isIntersected(fixedInterval));
-		assertFalse(fixedInterval.isIntersected(proveInterval));
+		assertTrue(proveInterval.isIn(fixedInterval));
+		assertFalse(fixedInterval.isIn(proveInterval));
 	}
 	
 }
