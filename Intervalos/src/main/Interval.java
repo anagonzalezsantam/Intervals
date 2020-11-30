@@ -16,18 +16,18 @@ public class Interval {
 	}
 
 	public boolean isIntersected(Interval interval) {
-		return interval.include(this.upperSemiInterval.limit) || 
-			   interval.include(this.lowerSemiInterval.limit) ||
-			   this.include(interval.getUpperSemiInterval().limit) ||
-			   this.include(interval.getLowerSemiInterval().limit);
+		return interval.include(this.getUpperLimit()) || 
+			   interval.include(this.getLowerLimit()) ||
+			   this.include(interval.getUpperLimit()) ||
+			   this.include(interval.getLowerLimit());
 	}
 	
-	private OpenUpperSemiInterval getUpperSemiInterval() {
-		return this.upperSemiInterval;
+	private double getUpperLimit() {
+		return this.upperSemiInterval.limit;
 	}
 	
-	private OpenLowerSemiInterval getLowerSemiInterval() {
-		return this.lowerSemiInterval;
+	private double getLowerLimit() {
+		return this.lowerSemiInterval.limit;
 	}
 	
 	@Override
