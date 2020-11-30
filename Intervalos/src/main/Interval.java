@@ -22,6 +22,10 @@ public class Interval {
 			   this.include(interval.getLowerLimit());
 	}
 	
+	private boolean isIn(Interval interval) {
+		return true;
+	}
+	
 	private double getUpperLimit() {
 		return this.upperSemiInterval.limit;
 	}
