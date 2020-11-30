@@ -19,7 +19,7 @@ public class Interval {
 		return interval.isIn(this) || this.isIn(interval);
 	}
 	
-	public boolean isIn(Interval interval) {
+	private boolean isIn(Interval interval) {
 		return interval.include(this.getUpperLimit()) || interval.include(this.getLowerLimit());
 	}
 	
