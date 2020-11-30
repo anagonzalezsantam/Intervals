@@ -17,14 +17,14 @@ public abstract class SemiIntervalTest {
 	    this.semiInterval = this.createSemiInterval();
 	  }
 	
-	public abstract SemiInterval createSemiInterval();
+	protected abstract SemiInterval createSemiInterval();
 		
 	@Test
-	public abstract void givenValueOutsideSemiIntervalThenFalse();
+	protected abstract void givenValueOutsideSemiIntervalThenFalse();
 
 	@Test
-	public abstract void givenValueEqualsSemiIntervalLimit();
+	protected abstract void givenValueEqualsSemiIntervalLimit();
 
 	@Test
-	public abstract void givenValueIntsideSemiIntervalThenTrue();
+	protected abstract void givenValueIntsideSemiIntervalThenTrue();
 }

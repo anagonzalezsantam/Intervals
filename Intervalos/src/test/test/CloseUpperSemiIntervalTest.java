@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CloseUpperSemiIntervalTest extends OpenUpperSemiIntervalTest {
 
   @Override
-  protected OpenUpperSemiInterval createUpperSemiInterval() {
+  protected OpenUpperSemiInterval createSemiInterval() {
     return new CloseUpperSemiInterval(this.point.getEquals());
   }
 

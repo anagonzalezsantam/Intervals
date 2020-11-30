@@ -10,7 +10,7 @@ import main.OpenLowerSemiInterval;
 public class CloseLowerSemiIntervalTest extends OpenLowerSemiIntervalTest {
 
   @Override
-  protected OpenLowerSemiInterval createLowerSemiInterval() {
+  protected OpenLowerSemiInterval createSemiInterval() {
     return new CloseLowerSemiInterval(this.point.getEquals());
   }
 

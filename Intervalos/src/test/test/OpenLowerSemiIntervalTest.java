@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import main.OpenLowerSemiInterval;
 import test.Point;
 
-public class OpenLowerSemiIntervalTest {
+public class OpenLowerSemiIntervalTest extends SemiIntervalTest {
   
   protected OpenLowerSemiInterval lowerSemiInterval;
   protected Point point;
@@ -17,10 +17,10 @@ public class OpenLowerSemiIntervalTest {
   @BeforeEach
   public void before(){
     this.point = new Point(4.4);
-    this.lowerSemiInterval = this.createLowerSemiInterval();
+    this.lowerSemiInterval = this.createSemiInterval();
   }
 
-  protected OpenLowerSemiInterval createLowerSemiInterval() {
+  protected OpenLowerSemiInterval createSemiInterval() {
     return new OpenLowerSemiInterval(this.point.getEquals());
   }
 

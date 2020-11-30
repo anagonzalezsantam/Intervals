@@ -9,7 +9,7 @@ import test.Point;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class OpenUpperSemiIntervalTest {
+public class OpenUpperSemiIntervalTest extends SemiIntervalTest {
   
   protected OpenUpperSemiInterval upperSemiInterval;
   protected Point point;
@@ -17,10 +17,10 @@ public class OpenUpperSemiIntervalTest {
   @BeforeEach
   public void before(){
     this.point = new Point(4.4);
-    this.upperSemiInterval = this.createUpperSemiInterval();
+    this.upperSemiInterval = this.createSemiInterval();
   }
 
-  protected OpenUpperSemiInterval createUpperSemiInterval() {
+  protected OpenUpperSemiInterval createSemiInterval() {
     return new OpenUpperSemiInterval(this.point.getEquals());
   }
 
